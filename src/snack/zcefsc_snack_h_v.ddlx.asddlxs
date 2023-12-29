@@ -1,0 +1,53 @@
+@Metadata.layer: #CORE
+
+@UI: {
+    headerInfo: {
+        typeName: 'Horário / Valor',
+        typeNamePlural: 'Horários / Valores'
+    }
+}
+
+annotate view ZCEFSC_SNACK_H_V with
+{
+
+  @UI.facet:
+  [
+  {
+  id:              'Itens',
+  purpose:         #STANDARD,
+  type:            #IDENTIFICATION_REFERENCE,
+  label:           'Horários / Valores',
+  position:        10
+  }
+  ]
+
+  @UI: {
+  identification: [ { position: 1 } ],
+  lineItem: [ { position: 2, label: 'Refeição' } ]
+  }
+  Refeicao;
+
+  @UI: {
+  identification: [ { position: 1 } ],
+  lineItem: [ { position: 3, label: 'Hora Início' } ]
+  }
+  HoraInicio;
+
+  @UI: {
+  identification: [ { position: 1 } ],
+  lineItem: [ { position: 4, label: 'Hora Fim' } ]
+  }
+  HoraFim;
+
+  @UI: {
+  identification: [ { position: 1 } ],
+  lineItem: [ { position: 1, label: 'Código Cantina' } ]
+  }
+  CodigoCantina;
+
+  @UI: {
+  identification: [ { position: 1 } ],
+  lineItem: [ { position: 5, label: 'Valor' } ]
+  }
+  Valor;
+}

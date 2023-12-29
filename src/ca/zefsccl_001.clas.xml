@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZEFSCCL_001</CLSNAME>
+    <LANGU>P</LANGU>
+    <DESCRIPT>EFSC - Gerenciador de Módulos</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZEFSCCL_001</CLSNAME>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZEFSCCL_001</CLSNAME>
+     <CMPNAME>CREATE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Criar Registros</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZEFSCCL_001</CLSNAME>
+     <CMPNAME>DELETE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Deletar Registros</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZEFSCCL_001</CLSNAME>
+     <CMPNAME>READ</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Ler Registros</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZEFSCCL_001</CLSNAME>
+     <CMPNAME>UPDATE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Modificar Registros</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZEFSCCL_001</CLSNAME>
+     <CMPNAME>VALIDATE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Validar Registros</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,24 @@
+managed; // implementation in class zbp_iefsc_canteen unique;
+
+define behavior for ZIEFSC_CANTEEN //alias <alias_name>
+persistent table zefsct_001
+lock master
+//authorization master ( instance )
+etag master ModificadoEm
+{
+  field ( readonly, numbering : managed ) IdCantina;
+  field ( mandatory ) CodigoCantina, CriadoEm, ModificadoEm;
+  create;
+  update;
+  delete;
+
+  mapping for zefsct_001
+  {
+    IdCantina = id;
+    CodigoCantina = codigo_cantina;
+    NomeCantina = nome_cantina;
+    Centro = centro;
+    CriadoEm = criado_em;
+    ModificadoEm = modificado_em;
+  }
+}

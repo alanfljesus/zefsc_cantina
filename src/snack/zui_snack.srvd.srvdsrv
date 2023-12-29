@@ -1,0 +1,5 @@
+@EndUserText.label: 'UI Snack'
+define service ZUI_SNACK {
+  expose ZCEFSC_SNACK;
+  expose ZCEFSC_SNACK_H_V;
+}

@@ -1,0 +1,71 @@
+@Metadata.layer: #CORE
+
+@UI: {
+    headerInfo: {
+        typeName: 'Colaborador',
+        typeNamePlural: 'Colaboradores'
+    }
+}
+
+annotate view ZCEFSC_COLLABORATOR with
+{
+
+  @UI.facet:
+  [
+    {
+    // Header
+    id: 'HeaderFacet',
+    purpose: #HEADER,
+    type: #FIELDGROUP_REFERENCE,
+    label: 'Colaborador',
+    targetQualifier: 'HeaderItems',
+    position: 10
+    },
+    {
+    id: 'FieldCollaborator',
+    type: #COLLECTION,
+    label: 'Campos Colaborador',
+    position: 10
+    },
+    {
+    id: 'FieldCollaboratorChild',
+    type: #FIELDGROUP_REFERENCE,
+    label: 'Dados Gerais',
+    parentId: 'FieldCollaborator',
+    targetQualifier: 'QualifCollaborator',
+    position: 10
+    }
+  ]
+
+  @UI: {
+  lineItem: [ { position: 1, label: 'Id' } ],
+  selectionField: [ { position: 1 } ],
+  fieldGroup: [ { qualifier: 'HeaderItems', position: 10 } ]
+  }
+  @EndUserText.label: 'Id'
+  IdColaborador;
+
+  @UI: {
+  lineItem: [ { position: 3, label: 'Cpf' } ],
+  selectionField: [ { position: 3 } ],
+  fieldGroup: [ { qualifier: 'QualifCollaborator', position: 10 } ]
+  }
+  @EndUserText.label: 'Cpf'
+  Cpf;
+
+  @UI: {
+  lineItem: [ { position: 2, label: 'Colaborador' } ],
+  selectionField: [ { position: 2 } ],
+  fieldGroup: [ { qualifier: 'QualifCollaborator', position: 20 } ]
+  }
+  @EndUserText.label: 'Nome Colaborador'
+  NomeColaborador;
+
+  @UI: {
+  lineItem: [ { position: 4, label: 'Centro' } ],
+  fieldGroup: [ { qualifier: 'QualifCollaborator', position: 30 } ]
+  }
+  @EndUserText.label: 'Centro'
+  Centro;
+
+}

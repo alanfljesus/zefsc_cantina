@@ -1,0 +1,21 @@
+managed; // implementation in class zbp_iefsc_collaborator unique;
+
+define behavior for ZIEFSC_COLLABORATOR //alias <alias_name>
+persistent table zefsct_002
+lock master
+//authorization master ( instance )
+etag master IdColaborador
+{
+  field ( readonly, numbering : managed ) IdColaborador;
+  create;
+  update;
+  delete;
+
+  mapping for zefsct_002
+  {
+    IdColaborador = id;
+    NomeColaborador = nome_colaborador;
+    Cpf = cpf;
+    Centro = centro;
+  }
+}

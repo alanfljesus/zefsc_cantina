@@ -1,0 +1,48 @@
+managed; // implementation in class zbp_iefsc_snack unique;
+
+define behavior for ZIEFSC_SNACK //alias <alias_name>
+persistent table zefsct_003
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  association _SnackHV { create; }
+
+  mapping for zefsct_003
+  {
+    Refeicao = refeicao;
+    HoraRefeicao = hora_refeicao;
+    ValorRefeicao = valor_refeicao;
+    CentroCusto = centro_custo;
+    IdColaborador = id_colaborador;
+  }
+
+//  mapping for zefsct_002
+//  {
+//    NomeColaborador = nome_colaborador;
+//  }
+}
+
+define behavior for ZIEFSC_SNACK_H_V //alias <alias_name>
+persistent table zefsct_004
+lock dependent by _Snack
+//authorization dependent by <association>
+//etag master <field_name>
+{
+  update;
+  delete;
+  association _Snack;
+
+  mapping for zefsct_004
+  {
+    Refeicao = refeicao;
+    CodigoCantina = codigo_cantina;
+    HoraInicio = hora_inicio;
+    HoraFim = hora_fim;
+    Valor = valor;
+
+  }
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'UI Collaborator'
+define service ZUI_COLLABORATOR {
+  expose ZCEFSC_COLLABORATOR;
+}

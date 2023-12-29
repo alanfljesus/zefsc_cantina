@@ -1,0 +1,4 @@
+@EndUserText.label: 'UI Canteen'
+define service ZUI_CANTEEN {
+  expose ZCEFSC_CANTEEN;
+}

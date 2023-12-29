@@ -1,0 +1,68 @@
+@Metadata.layer: #CORE
+
+@UI: {
+    headerInfo: {
+        typeName: 'Pedido Refeição',
+        typeNamePlural: 'Pedidos Refeições',
+        title: { type: #STANDARD, label: 'Pedidos Refeição', value: 'Refeicao' }
+    }
+}
+
+
+annotate view ZCEFSC_SNACK with
+
+{
+
+  @UI.facet:
+    [
+      {
+      id: 'Itens',
+      type:            #LINEITEM_REFERENCE,
+      label:           'Detalhes Refeição',
+      position:         20,
+      targetElement:   '_SnackHV'},
+
+      {
+      id:              'Pedido',
+      purpose:         #STANDARD,
+      type:            #IDENTIFICATION_REFERENCE,
+      label:           'Dados da Refeição',
+      position:        10
+      }
+    ]
+
+  @UI: {
+  identification: [ { position: 20, label: 'Refeição'} ],
+  lineItem: [ { position: 20, label: 'Refeição' } ],
+  selectionField: [ { position: 1 } ]
+  }
+  Refeicao;
+
+  @UI: {
+  identification: [ { position: 30, label: 'Hora Refeição'} ],
+  lineItem: [ { position: 30, label: 'Hora Refeicao' } ]
+  }
+  HoraRefeicao;
+
+  @UI: {
+  identification: [ { position: 1, label: 'Valor Refeição'} ],
+  lineItem: [ { position: 40, label: 'Valor Refeição' } ]
+  }
+  ValorRefeicao;
+
+  @UI: {
+  identification: [ { position: 1, label: 'Colaborador'} ],
+  lineItem: [ { position: 10, label: 'Colaborador' } ]
+  }
+  IdColaborador;
+  
+  @UI.hidden: true
+  NomeColaborador;
+
+  @UI: {
+  identification: [ { position: 1, label: 'Centro'} ],
+  lineItem: [ { position: 50, label: 'Centro' } ],
+  selectionField: [ { position: 2 } ]
+  }
+  CentroCusto;
+}

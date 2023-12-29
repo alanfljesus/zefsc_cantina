@@ -1,0 +1,75 @@
+@Metadata.layer: #CORE
+
+@UI: {
+    headerInfo: {
+        typeName: 'Cantina',
+        typeNamePlural: 'Cantinas'
+}
+}
+
+annotate view ZCEFSC_CANTEEN with
+{
+
+  @UI.facet: [
+    {
+     id:              'HeaderFacet',
+     purpose:         #HEADER,
+     type:            #FIELDGROUP_REFERENCE,
+     label:           'Cantina',
+     targetQualifier: 'HeaderItems',
+     position:         10
+    },
+    {
+     id:              'FieldsCanteen',
+     type:            #COLLECTION,
+     label:           'Campos Cantina',
+     position:        10
+    },
+    {
+     id:              'FieldsCanteenChild',
+     type:            #FIELDGROUP_REFERENCE,
+     label:           'Dados Gerais',
+     parentId:        'FieldsCanteen',
+     targetQualifier: 'QualifCanteen',
+     position:         10
+    }
+   ]
+
+  @UI: { lineItem: [{ position: 10, label: 'ID' }],
+  fieldGroup:     [ { qualifier: 'HeaderItems',
+                             position: 10 } ] }
+  @EndUserText.label: 'Id Cantina'
+  IdCantina;
+
+  @UI: { lineItem: [{ position: 30, label: 'Cantina' }],
+   fieldGroup:     [ { qualifier: 'QualifCanteen',
+                             position: 10 } ]
+   }
+  @EndUserText.label: 'Nome Cantina'
+  NomeCantina;
+
+  @UI: { lineItem: [{ position: 20, label: 'Código Cantina' }],
+  fieldGroup:     [ { qualifier: 'QualifCanteen',
+                             position: 20 } ] }
+  @EndUserText.label: 'Código Cantina'
+  CodigoCantina;
+
+  @UI: { lineItem: [{ position: 50, label: 'Centro' }],
+  fieldGroup:     [ { qualifier: 'QualifCanteen',
+                             position: 30 } ]
+  }
+  @EndUserText.label: 'Centro'
+  Centro;
+
+  @UI: { fieldGroup: [{ qualifier: 'QualifCanteen',
+                        position: 40 } ]
+  }
+  @EndUserText.label: 'Criado Em'
+  CriadoEm;
+
+  @UI: { fieldGroup: [{ qualifier: 'QualifCanteen',
+                        position: 50 } ]
+  }
+  @EndUserText.label: 'Modificado Em'
+  ModificadoEm;
+}
